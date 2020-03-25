@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStreetsTable extends Migration
+class AddLevelIdAtUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,18 @@ class CreateStreetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('streets', function (Blueprint $table) {
-            $table->id();
-			$table->string('nameStreet');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            
+			$table->bigInteger('level_id')->unsigned()
+				
+				->nullable()
+				->after('id');
+				
+				$table->foreign('level_id')->references('id')->on('levels')
+				->onDelete('set null')
+				->onUpdate('cascade');
+			
+           
         });
     }
 
@@ -27,6 +35,6 @@ class CreateStreetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('streets');
+        //
     }
 }
