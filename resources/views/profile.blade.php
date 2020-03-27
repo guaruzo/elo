@@ -59,7 +59,7 @@
                     		<div class="card mb-3">
                     			<div class="row">
                     				<div class="col-md-4">
-                    					<img src="{{$post->image->url}}" class="card-img">
+                    					<img src="https://images.freeimages.com/images/large-previews/540/dandelion-37-1388001.jpg" class="card-img">
                     				</div>
                     				<div class="col-md-8">
                     					<h5 class="card-title">{{$post->name}}</h5>
@@ -88,7 +88,7 @@
                     		<div class="card mb-3">
                     			<div class="row">
                     				<div class="col-md-4">
-                    					<img src="{{$post->image->url}}" class="card-img">
+                    					<img src="https://images.freeimages.com/images/large-previews/1c9/maine-at-4-45-am-1370871.jpg" class="card-img">
                     				</div>
                     				<div class="col-md-8">
                     					<h5 class="card-title">{{$videos->name}}</h5>
