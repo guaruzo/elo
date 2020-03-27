@@ -52,8 +52,10 @@ class UsersController extends Controller
 		$web=$us->profile->web;
 		$pa=$us->location->country;
 		$ni=$us->level->name;
+		$pos=$us->posts()->withCount('comments')->get();
+		$vid=$us->videos;
 		
-        return view('profile', compact("us", "ins", "git", "web", "pa", "ni"));
+        return view('profile', compact("us", "ins", "git", "web", "pa", "ni", "pos", "vid"));
     }
 
     /**

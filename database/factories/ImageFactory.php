@@ -9,6 +9,6 @@ $factory->define(Image::class, function (Faker $faker) {
     return [
         
 
-        'url'=>$faker->imageUrl(1024, 1024)
+        'url'=>$faker->imageUrl(90, 90)
     ];
 });

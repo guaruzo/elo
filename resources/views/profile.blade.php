@@ -47,6 +47,66 @@
                     	@endforelse
                     </p>
                     <hr>
+                    
+                    
+                    
+                    <h3>Post</h3>
+                   
+                    
+                    <div class="row">
+                    	@foreach($pos as $post)
+                    	<div class="col-6">
+                    		<div class="card mb-3">
+                    			<div class="row">
+                    				<div class="col-md-4">
+                    					<img src="{{$post->image->url}}" class="card-img">
+                    				</div>
+                    				<div class="col-md-8">
+                    					<h5 class="card-title">{{$post->name}}</h5>
+                    					<h6 class="card-subtitle text-muted">
+                    						{{$post->category->name}} |
+                    						{{$post->comments_count}}
+                    						{{Str::plural('Comentario', $post->comment_count)}}
+                    					</h6>
+                    				</div>
+                    			</div>
+                    		</div>
+                    	</div>
+                    	@endforeach
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                     <h3>Videos</h3>
+                   
+                    
+                    <div class="row">
+                    	@foreach($vid as $videos)
+                    	<div class="col-6">
+                    		<div class="card mb-3">
+                    			<div class="row">
+                    				<div class="col-md-4">
+                    					<img src="{{$post->image->url}}" class="card-img">
+                    				</div>
+                    				<div class="col-md-8">
+                    					<h5 class="card-title">{{$videos->name}}</h5>
+                    					<h6 class="card-subtitle text-muted">
+                    						{{$videos->category->name}} |
+                    						{{$videos->comments_count}}
+                    						{{Str::plural('Comentario', $post->comment_count)}}
+                    					</h6>
+                    				</div>
+                    			</div>
+                    		</div>
+                    	</div>
+                    	@endforeach
+                    </div>
+                    
+                    
+                    
+                    
                 </div>
                 
             </div>

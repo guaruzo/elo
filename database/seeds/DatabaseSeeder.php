@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
 
         	$profile->location()->save(factory(App\Location::class)->make());
 
-        	$user->groups()->attach($this->array(rand(1, 3)));
+        	$user->groups()->attach($this->arra(rand(1, 3)));
 
         	$user->image()->save(factory(App\Image::class)->make(['url'=>'https://lorempixel.com/90/90/'
         	]));
@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
         factory(App\Post::class, 40)->create()->each(function($post){
 
         	$post->image()->save(factory(App\Image::class)->make());
-        	$post->tags()->attach($this->array(rand(1, 12)));
+        	$post->tags()->attach($this->arra(rand(1, 12)));
 
         	$number_comments=rand(1, 6);
 
@@ -48,7 +48,7 @@ class DatabaseSeeder extends Seeder
         factory(App\Video::class, 40)->create()->each(function($video){
 
         	$video->image()->save(factory(App\Image::class)->make());
-        	$video->tags()->attach($this->array(rand(1, 12)));
+        	$video->tags()->attach($this->arra(rand(1, 12)));
 
         	$number_comments=rand(1, 6);
 
@@ -61,7 +61,7 @@ class DatabaseSeeder extends Seeder
 
     }
 
-    public function array($max)
+    public function arra($max)
     {
 
 
