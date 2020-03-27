@@ -54,10 +54,18 @@ class UsersController extends Controller
 		$ni=$us->level->name;
 		$pos=$us->posts()->withCount('comments')->get();
 		$vid=$us->videos;
+		$lev=$us->level;
 		
         return view('profile', compact("us", "ins", "git", "web", "pa", "ni", "pos", "vid"));
     }
 
+	 public function levels($id)
+    {
+        $lev=Level::find($id);
+		
+		
+        return view('levels', compact("lev"));
+    }
     /**
      * Show the form for editing the specified resource.
      *

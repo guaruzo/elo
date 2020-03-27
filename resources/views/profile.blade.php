@@ -30,7 +30,9 @@
                     	<strong>País</strong>: {{$pa}}<br>
                     	<strong>Nivel</strong>: 
                     	@if ($ni) 
-                    	<a href="#">{{$ni}}</a> 
+                    		
+                    		<a href="#">{{$ni}}</a> 
+                    		
                     	@else 
                     	--- 
                     	@endif 
@@ -57,17 +59,19 @@
                     	@foreach($pos as $post)
                     	<div class="col-6">
                     		<div class="card mb-3">
-                    			<div class="row">
+                    			<div class="row no-gutters">
                     				<div class="col-md-4">
                     					<img src="https://images.freeimages.com/images/large-previews/540/dandelion-37-1388001.jpg" class="card-img">
                     				</div>
                     				<div class="col-md-8">
-                    					<h5 class="card-title">{{$post->name}}</h5>
-                    					<h6 class="card-subtitle text-muted">
-                    						{{$post->category->name}} |
-                    						{{$post->comments_count}}
-                    						{{Str::plural('Comentario', $post->comment_count)}}
-                    					</h6>
+										<div class="card-body">
+											<h5 class="card-title">{{$post->name}}</h5>
+											<h6 class="card-subtitle text-muted">
+												{{$post->category->name}} |
+												{{$post->comments_count}}
+												{{Str::plural('Comentario', $post->comment_count)}}
+											</h6>
+										</div>
                     				</div>
                     			</div>
                     		</div>
@@ -86,17 +90,19 @@
                     	@foreach($vid as $videos)
                     	<div class="col-6">
                     		<div class="card mb-3">
-                    			<div class="row">
+                    			<div class="row no-gutters">
                     				<div class="col-md-4">
                     					<img src="https://images.freeimages.com/images/large-previews/1c9/maine-at-4-45-am-1370871.jpg" class="card-img">
                     				</div>
                     				<div class="col-md-8">
-                    					<h5 class="card-title">{{$videos->name}}</h5>
-                    					<h6 class="card-subtitle text-muted">
-                    						{{$videos->category->name}} |
-                    						{{$videos->comments_count}}
-                    						{{Str::plural('Comentario', $post->comment_count)}}
-                    					</h6>
+										<div class="card-body">
+											<h5 class="card-title">{{$videos->name}}</h5>
+											<h6 class="card-subtitle text-muted">
+												{{$videos->category->name}} |
+												{{$videos->comments_count}}
+												{{Str::plural('Comentario', $post->comment_count)}}
+											</h6>
+										</div>
                     				</div>
                     			</div>
                     		</div>
