@@ -22,10 +22,31 @@
                     <h1>{{$us->name}}</h1>
                     <h3>{{$us->email}}</h3>
                     <p>
-                        <strong>Instagram</strong>: {{$us->profile->instagram}}<br>
-                        <strong>Github</strong>: {{$us->profile->github}}<br>
-                        <strong>Web</strong>: {{$us->profile->web}}<br>
+                        <strong>Instagram</strong>: {{$ins}}<br>
+                        <strong>Github</strong>: {{$git}}<br>
+                        <strong>Web</strong>: {{$web}}<br>
                     </p>
+                    <p>
+                    	<strong>País</strong>: {{$pa}}<br>
+                    	<strong>Nivel</strong>: 
+                    	@if ($ni) 
+                    	<a href="#">{{$ni}}</a> 
+                    	@else 
+                    	--- 
+                    	@endif 
+                    	<br>
+                    </p>
+                    <hr>
+                    <p>
+                    	<strong>Grupos</strong>
+                    		
+                    	@forelse($us->groups as $group)
+                    	<span class="badge badge-primary">{{$group->name}}</span>
+                    	@empty
+                    	<em>No pertenece a ningún grupo</em>
+                    	@endforelse
+                    </p>
+                    <hr>
                 </div>
                 
             </div>

@@ -47,8 +47,13 @@ class UsersController extends Controller
     public function show($id)
     {
         $us=User::find($id);
-
-        return view('profile', compact("us"));
+		$ins=$us->profile->instagram;
+		$git=$us->profile->github;
+		$web=$us->profile->web;
+		$pa=$us->location->country;
+		$ni=$us->level->name;
+		
+        return view('profile', compact("us", "ins", "git", "web", "pa", "ni"));
     }
 
     /**
