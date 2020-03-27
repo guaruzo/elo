@@ -87,7 +87,7 @@
                 <div class="links">
                     @foreach($us as $usuario)
 
-                    <a href="#">{{$usuario->name}}</a>
+                    <a href="{{route('vistasUsers.show', $usuario->id)}}">{{$usuario->name}}</a>
 
                     @endforeach
                     
