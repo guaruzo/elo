@@ -62,7 +62,7 @@
                     		<div class="card mb-3">
                     			<div class="row no-gutters">
                     				<div class="col-md-4">
-                    					<img src="https://images.freeimages.com/images/large-previews/540/dandelion-37-1388001.jpg" class="card-img">
+                    					<img src="{{$post->image->url}}" class="card-img">
                     				</div>
                     				<div class="col-md-8">
 										<div class="card-body">
@@ -101,7 +101,7 @@
                     		<div class="card mb-3">
                     			<div class="row no-gutters">
                     				<div class="col-md-4">
-                    					<img src="https://images.freeimages.com/images/large-previews/1c9/maine-at-4-45-am-1370871.jpg" class="card-img">
+                    					<img src="{{$videos->image->url}}" class="card-img">
                     				</div>
                     				<div class="col-md-8">
 										<div class="card-body">

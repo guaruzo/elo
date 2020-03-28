@@ -30,7 +30,7 @@
                     		<div class="card mb-3">
                     			<div class="row no-gutters">
                     				<div class="col-md-4">
-                    					<img src="https://images.freeimages.com/images/large-previews/540/dandelion-37-1388001.jpg" class="card-img">
+                    					<img src="{{$post->image->url}}" class="card-img">
                     				</div>
                     				<div class="col-md-8">
 										<div class="card-body">
@@ -40,6 +40,13 @@
 												{{$post->comments_count}}
 												{{Str::plural('Comentario', $post->comments_count)}}
 											</h6>
+                                            <p class="card-text small">
+                                                @foreach ($post->tags as $tag)
+                                                <span class="badge badge-light">
+                                                    #{{$tag->name}}
+                                                </span>
+                                                @endforeach
+                                            </p>
 										</div>
                     				</div>
                     			</div>
@@ -62,7 +69,7 @@
                     		<div class="card mb-3">
                     			<div class="row no-gutters">
                     				<div class="col-md-4">
-                    					<img src="https://images.freeimages.com/images/large-previews/1c9/maine-at-4-45-am-1370871.jpg" class="card-img">
+                    					<img src="{{$videos->image->url}}" class="card-img">
                     				</div>
                     				<div class="col-md-8">
 										<div class="card-body">
@@ -72,6 +79,13 @@
 												{{$videos->comments_count}}
 												{{Str::plural('Comentario', $post->comments_count)}}
 											</h6>
+                                            <p class="card-text small">
+                                                @foreach ($videos->tags as $tag)
+                                                <span class="badge badge-light">
+                                                    #{{$tag->name}}
+                                                </span>
+                                                @endforeach
+                                            </p>
                                            
 										</div>
                     				</div>
