@@ -70,8 +70,16 @@
 											<h6 class="card-subtitle text-muted">
 												{{$post->category->name}} |
 												{{$post->comments_count}}
-												{{Str::plural('Comentario', $post->comment_count)}}
+												{{Str::plural('Comentario', $post->comments_count)}}
 											</h6>
+                                             <p class="card-text small">
+                                                @foreach ($post->tags as $tag)
+                                                <span class="badge badge-light">
+                                                    #{{$tag->name}}
+                                                </span>
+                                                @endforeach
+                                            </p>
+
 										</div>
                     				</div>
                     			</div>
@@ -100,9 +108,17 @@
 											<h5 class="card-title">{{$videos->name}}</h5>
 											<h6 class="card-subtitle text-muted">
 												{{$videos->category->name}} |
-												{{$videos->comments_count}}
-												{{Str::plural('Comentario', $post->comment_count)}}
+                                                {{$videos->comments_count}}
+                                                {{Str::plural('Comentario', $videos->comments_count)}}
 											</h6>
+                                             <p class="card-text small">
+                                                @foreach ($videos->tags as $tag)
+                                                <span class="badge badge-light">
+                                                    #{{$tag->name}}
+                                                </span>
+                                                @endforeach
+                                            </p>
+
 										</div>
                     				</div>
                     			</div>

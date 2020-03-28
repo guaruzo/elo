@@ -38,7 +38,7 @@
 											<h6 class="card-subtitle text-muted">
 												{{$post->category->name}} |
 												{{$post->comments_count}}
-												{{Str::plural('Comentario', $post->comment_count)}}
+												{{Str::plural('Comentario', $post->comments_count)}}
 											</h6>
 										</div>
                     				</div>
@@ -70,8 +70,9 @@
 											<h6 class="card-subtitle text-muted">
 												{{$videos->category->name}} |
 												{{$videos->comments_count}}
-												{{Str::plural('Comentario', $post->comment_count)}}
+												{{Str::plural('Comentario', $post->comments_count)}}
 											</h6>
+                                           
 										</div>
                     				</div>
                     			</div>
