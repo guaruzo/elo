@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Level;
+
 class UsersController extends Controller
 {
     /**
@@ -51,7 +53,7 @@ class UsersController extends Controller
 		$git=$us->profile->github;
 		$web=$us->profile->web;
 		$pa=$us->location->country;
-		$ni=$us->level->name;
+		$ni=$us->level;
 		$pos=$us->posts()->withCount('comments')->get();
 		$vid=$us->videos;
 		$lev=$us->level;

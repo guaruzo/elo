@@ -17,4 +17,4 @@ Route::get('/', 'UsersController@index');
 
 Route::resource('/vistasUsers', 'UsersController');
 
-Route::get('/levels', 'UsersController@levels');
+Route::get('/levels/{id}', 'UsersController@levels');

@@ -29,9 +29,10 @@
                     <p>
                     	<strong>País</strong>: {{$pa}}<br>
                     	<strong>Nivel</strong>: 
+                        
                     	@if ($ni) 
                     		
-                    		<a href="#">{{$ni}}</a> 
+                    		<a href="{{url("/levels/{$ni->id}")}}">{{$ni->name}}</a> 
                     		
                     	@else 
                     	--- 

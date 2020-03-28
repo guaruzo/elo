@@ -6,5 +6,7 @@
 </head>
 
 <body>
+	<h1>Niveles</h1>
+	{{$lev->name}}
 </body>
 </html>
