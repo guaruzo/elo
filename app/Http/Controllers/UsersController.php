@@ -63,10 +63,20 @@ class UsersController extends Controller
 
 	 public function levels($id)
     {
-        $lev=Level::find($id);
+        $level=Level::find($id);
 		
+
+        $posts=$level->posts()
+
+            ->with('category', 'image', 'tags')
+            ->withCount('comments')->get();
+
+        $videos=$level->videos()
+
+            ->with('category', 'image', 'tags')
+            ->withCount('comments')->get();
 		
-        return view('levels', compact("lev"));
+        return view('levels', compact("level", 'posts', 'videos'));
     }
     /**
      * Show the form for editing the specified resource.

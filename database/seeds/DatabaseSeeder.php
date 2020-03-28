@@ -13,9 +13,9 @@ class DatabaseSeeder extends Seeder
     {
         factory(App\Group::class, 3)->create();
 
-        factory(App\Level::class)->create(['name'=>'oro']);
-        factory(App\Level::class)->create(['name'=>'plata']);
-        factory(App\Level::class)->create(['name'=>'bronce']);
+        factory(App\Level::class)->create(['name'=>'Oro']);
+        factory(App\Level::class)->create(['name'=>'Plata']);
+        factory(App\Level::class)->create(['name'=>'Bronce']);
 
         factory(App\User::class, 5)->create()->each(function($user){
 
